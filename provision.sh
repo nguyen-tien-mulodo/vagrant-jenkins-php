@@ -8,7 +8,15 @@ echo '# Update Pear and install packages - (this will take a while)';
 yum install php-pear -y -q
 pear upgrade PEAR
 pear config-set auto_discover 1
-pear install pear.phpqatools.org/phpqatools  
+#pear install pear.phpqatools.org/phpqatools  
+pear install --alldeps pear.phpunit.de/PHPUnit
+pear install --alldeps PHP_CodeSniffer
+pear install --alldeps pear.phpunit.de/phploc
+pear install --alldeps pear.pdepend.org/PHP_Depend
+pear channel-discover pear.phpmd.org
+pear install --alldeps phpmd/PHP_PMD
+pear install --alldeps pear.phpunit.de/phpcpd
+pear install -f --alldeps pear.netpirates.net/phpDox
 
 echo '# Installing Java - (this may take a while).'
 yum install java-1.6.0-openjdk -y -q

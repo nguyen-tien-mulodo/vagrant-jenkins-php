@@ -1,5 +1,23 @@
 The purpose of this repository is to provide a demo of the PHP continuous integration server described on http://jenkins-php.org/.
 
+This is a fork from original yanickj/jenkins-php. It mainly fix the bug that pear.phpqatools.org/phpqatools no longer support, and Dropbox block the image of Vagrant CentOS-6.3-x86_64-minimal.box due to bandwidth issue.
+
+Per jenkins-php.org and www.phpqatools.org suggested, this git install following package one-by-one
+
+ * PHPUnit
+ * PHP_CodeSniffer
+ * PHPLOC
+ * PHP_Depend
+ * PHPMD
+ * PHPCPD
+ * phpDox
+
+Also this git use CentOS-6.5-x86_64-mimimal.box from:
+
+http://nrel.github.io/vagrant-boxes
+
+Please make sure you have faster connection with it.
+
 #### Requirements
  * [Vagrant](http://www.vagrantup.com/)
  * [VirtualBox](https://www.virtualbox.org/ "Oracle")

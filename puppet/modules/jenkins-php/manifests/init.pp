@@ -7,9 +7,52 @@ class jenkins-php {
         enable => false,
     }
 
-    php::pear::module { 'phpqatools':
-        repository  => 'pear.phpqatools.org',
+    php::pear::module { 'PHPUnit':
+        repository  => 'pear.phpunit.de',
         use_package => 'no',
+        alldeps     => true,
+        timeout     => 0,
+    }
+
+    php::pear::module { 'PHP_CodeSniffer':
+        use_package => 'no',
+        alldeps     => true,
+        timeout     => 0,
+    }
+
+    php::pear::module { 'phploc':
+        repository  => 'pear.phpunit.de',
+        use_package => 'no',
+        alldeps     => true,
+        timeout     => 0,
+    }
+
+    php::pear::module { 'PHP_Depend':
+        repository  => 'pear.pdepend.org',
+        use_package => 'no',
+        alldeps     => true,
+        timeout     => 0,
+    }
+
+    php::pear::module { 'PHP_PMD':
+        repository  => 'pear.phpmd.org',
+        use_package => 'no',
+        alldeps     => true,
+        timeout     => 0,
+    }
+
+    php::pear::module { 'phpcpd':
+        repository  => 'pear.phpunit.de',
+        use_package => 'no',
+        alldeps     => true,
+        timeout     => 0,
+    }
+
+    php::pear::module { 'phpDox':
+        repository  => 'pear.netpirates.net',
+        use_package => 'no',
+        alldeps     => true,
+        preferred_state => 'alpha',
         timeout     => 0,
     }
 
